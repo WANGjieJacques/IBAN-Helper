@@ -170,7 +170,7 @@ public class RFIBANHelper: NSObject {
 
   public static func ibanStructure(_ countryCode: String) -> Dictionary<String, NSObject> {
 
-    if let path = Bundle(for: object_getClass(self)).path(forResource: "IBANStructure", ofType: "plist") {
+    if let path = Bundle(for: object_getClass(self)!).path(forResource: "IBANStructure", ofType: "plist") {
       let ibanStructureList = NSArray(contentsOfFile:path) as! [[String: AnyObject]]
 
       for ibanStructure in ibanStructureList {
